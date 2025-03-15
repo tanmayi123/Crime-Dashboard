@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Data Analysis - 2025</title>
+    <style>
+         {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333366;
+        }
+        p {
+            color: #444;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        ul {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #cc0000;
+        }
+        img { width: 80%; max-width: 800px; margin: 20px auto; display: block; border-radius: 10px; box-shadow: 2px 2px 10px gray; }
+        .container { width: 90%; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); }
+        h1 { color: darkblue; margin-top: 20px; }
+        h2 { color: #333; }
+        p { font-size: 18px; margin: 10px auto; color: #555; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Crime Data Analysis - 2025</h1>
+
+    <h2>Introduction to the Crime Dataset</h2>
+    <p>The <b>Crime Incidents in 2025</b> dataset provides a comprehensive overview of criminal activities recorded in a metropolitan area throughout the year. The dataset includes essential information such as:</p>
+    
+    <ul>
+        <li><span class="highlight">Crime Type (OFFENSE):</span> Categorizes offenses such as theft, robbery, and assault.</li>
+        <li><span class="highlight">Time & Shift:</span> Identifies whether crimes occurred in the day, evening, or midnight shift.</li>
+        <li><span class="highlight">Method Used:</span> Specifies the means of crime (e.g., gun, knife, or other tools).</li>
+        <li><span class="highlight">Location Details:</span> Includes latitude, longitude, district, and ward classifications.</li>
+        <li><span class="highlight">Timestamp:</span> Captures the exact date and time of reported crimes.</li>
+    </ul>
+
+    <p>This dataset enables detailed crime trend analysis, hotspot detection, and predictive modeling to assist law enforcement in resource allocation and crime prevention.</p>
+
+  </div>
+
+    <div class="container">
+    <h1>Crime Data Visualization Dashboard</h1>
+    
+
+
+        <h2>Top 10 Crime Offenses</h2>
+        <img src="top_10_crimes.png" alt="Top 10 Crimes">
+        <p>This horizontal bar chart displays the ten most frequently committed crimes. 
+        Theft-related crimes, including vehicle theft and property-related offenses, are the most common.</p>
+
+        <h2>Crimes per District</h2>
+        <img src="crime_by_district.png" alt="Crime by District">
+        <p>The pie chart represents the distribution of crimes across different districts. 
+        Certain districts report significantly higher crime rates, indicating potential hotspots.</p>
+
+        <h2>Crime Count Over Time</h2>
+        <img src="daily_crime_trend.png" alt="Crime Count Over Time">
+        <p>This line plot tracks daily crime incidents over time. Peaks in the graph suggest periods of increased criminal activity, 
+        which may correlate with events, holidays, or specific crime waves.</p>
+
+        <h2>Crime Distribution by Method</h2>
+        <img src="crime_by_method.png" alt="Crime by Method">
+        <p>This histogram categorizes crimes by the method used (Gun, Knife, or Other). 
+        A majority of crimes fall under the 'Others' category, likely indicating non-violent methods such as fraud or theft.</p>
+
+        <h2>Crime Density by Ward</h2>
+        <img src="crime_density_by_ward.png" alt="Crime Density by Ward">
+        <p>This bar chart visualizes crime density across different city wards. 
+        Some wards report significantly higher crime rates, highlighting areas needing more law enforcement attention.</p>
+
+        <h2>Crime Occurrences by Time of Day</h2>
+        <img src="crime_by_hour.png" alt="Crime by Hour">
+        <p>This bar chart shows the number of crimes occurring at different hours of the day. 
+        Crime rates tend to peak in the late evening, potentially due to reduced police presence.</p>
+
+        <h2>Crime Type vs. Method Used</h2>
+        <img src="crime_vs_method_heatmap.png" alt="Crime vs. Method Heatmap">
+        <p>The heatmap identifies relationships between crime types and the methods used. 
+        Violent crimes often involve weapons, while property crimes are more likely to be non-violent.</p>
+
+        <h2>Crime Locations (Latitude vs. Longitude)</h2>
+        <img src="crime_locations.png" alt="Crime Locations">
+        <p>This scatterplot maps crime occurrences by geographic location, helping pinpoint high-crime zones. 
+        Law enforcement can use this to monitor and prevent crimes in these areas.</p>
+
+        <h2>Crime Frequency by Day of the Week</h2>
+        <img src="crime_by_day_of_week.png" alt="Crime by Day of the Week">
+        <p>This bar chart breaks down crime frequency by day of the week. 
+        Weekends tend to have higher crime rates, likely due to increased nightlife and gatherings.</p>
+
+        <h2>Crime Rate per Capita by District</h2>
+        <img src="crime_rate_per_capita.png" alt="Crime Rate Per Capita">
+        <p>This visualization calculates crime rate per 100,000 people in each district, allowing for a fair comparison across different population sizes.</p>
+
+        <h2>Crime Seasonality Analysis (Rolling Average)</h2>
+        <img src="crime_seasonality.png" alt="Crime Seasonality">
+        <p>A rolling average smooths out short-term fluctuations and helps visualize seasonal trends in crime activity.</p>
+
+        <h2>Crime Predictability – Autocorrelation Analysis</h2>
+        <img src="crime_autocorrelation.png" alt="Crime Predictability">
+        <p>This autocorrelation function (ACF) plot determines how past crime rates influence future crime occurrences.</p>
+
+        <h2>KDE Plot – Crime Occurrences by Time of Day</h2>
+        <img src="crime_kde_by_hour.png" alt="KDE Plot Crime by Hour">
+        <p>The KDE plot shows the density of crimes occurring at various times of the day, providing a smooth probability distribution.</p>
+
+        <h2>Violin Plot – Crime Distribution by Method</h2>
+        <img src="crime_violin_method.png" alt="Violin Plot Crime by Method">
+        <p>This violin plot represents crime severity across different methods, showing distribution spread and density.</p>
+
+        <h2>Hexbin Plot – Geospatial Crime Density</h2>
+        <img src="crime_hexbin.png" alt="Hexbin Plot Crime Density">
+        <p>Using hexagonal bins, this visualization clusters crime occurrences spatially, providing insight into high-density regions.</p>
+
+        <h2>Joint Plot – Relationship Between Crime Time and Latitude</h2>
+        <img src="crime_jointplot_time_latitude.png" alt="Joint Plot Crime Time Latitude">
+        <p>This joint plot examines how crime occurrences relate to time of day and geographic location.</p>
+
+        <h2>Crime Hotspots Using K-Means Clustering</h2>
+        <img src="crime_hotspots_kmeans.png" alt="Crime Hotspots K-Means">
+        <p>Clustering crime locations into groups using K-Means identifies crime-prone areas for resource allocation.</p>
+
+        <h2>Crime Hotspots Using DBSCAN</h2>
+        <img src="crime_hotspots_dbscan.png" alt="Crime Hotspots DBSCAN">
+        <p>DBSCAN detects densely packed crime clusters, marking outliers for further investigation.</p>
+
+        <h2>Crime Anomalies Using Isolation Forest</h2>
+        <img src="crime_anomalies.png" alt="Crime Anomalies">
+        <p>The Isolation Forest model identifies unusual crime patterns, flagging outliers that differ significantly from typical crime distributions.</p>
+
+    </div>
+
+
+    <div class="container">
+    <h2>Conclusion - Key Findings from Visualizations</h2>
+
+    <h3> 1️.Crime Trends Over Time</h3>
+    <ul>
+        <li>Crime incidents exhibit <span class="highlight">seasonal patterns</span>, with peak activity during specific periods.</li>
+        <li>A <span class="highlight">7-day rolling average</span> reveals fluctuations in crime frequency.</li>
+    </ul>
+
+    <h3> 2️. Crime Distribution by Type & Method</h3>
+    <ul>
+        <li><span class="highlight">Theft and auto-related crimes</span> dominate the dataset.</li>
+        <li>Most crimes are committed using <span class="highlight">non-weapon methods</span>, but firearms and knives are linked to serious offenses.</li>
+    </ul>
+
+    <h3> 3️. Geospatial Crime Hotspots</h3>
+    <ul>
+        <li><span class="highlight">K-Means & DBSCAN clustering</span> highlight high-risk areas.</li>
+        <li>Crime is concentrated in <span class="highlight">specific geographic zones</span>, requiring targeted policing.</li>
+    </ul>
+
+    <h3> 4️. Crime Timing & Predictability</h3>
+    <ul>
+        <li>Crime activity peaks in the <span class="highlight">evening (15:00 - 23:00)</span>.</li>
+        <li>Autocorrelation analysis suggests periodic trends but also randomness, making long-term forecasting challenging.</li>
+    </ul>
+
+    <h3> 5️. Anomaly Detection</h3>
+    <ul>
+        <li><span class="highlight">Isolation Forest</span> detected unusual crime patterns that require further monitoring.</li>
+        <li>Anomalies may indicate <span class="highlight">emerging crime trends</span> or isolated incidents.</li>
+    </ul>
+
+    <h2> Final Takeaways</h2>
+    <ul>
+        <li><b>Crime hotspots</b> are concentrated in certain areas, necessitating proactive policing.</li>
+        <li><b>Crime rates fluctuate</b> based on the time of day, with high activity during evenings.</li>
+        <li><b>Weapon-involved crimes</b> (e.g., guns, knives) are associated with high-severity offenses.</li>
+        <li><b>Unexpected crime anomalies</b> suggest potential shifts in crime trends.</li>
+    </ul>
+
+    <p>Understanding these patterns can help <b>law enforcement, policymakers, and urban planners</b> take proactive steps towards improving public safety.</p>
+    </div>
+
+</body>
+</html>
